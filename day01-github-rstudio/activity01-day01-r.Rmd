@@ -32,7 +32,34 @@ I also encourage you to use comments (`#`) to help you identify each item (I pro
 7. Return to the **Day 1** `README` file to finish the process of committing and pushing to GitHub.
 
 ```{r simple-calculations}
-# Item 1
-
+# Add the values 2 and 5
+2 + 5
+```
+```{r int-vector}
+#Creates an R object called `int_vect` that contains the values 1 through 9
+int_vector <- 1:9
 ```
 
+```{r char_vect}
+#Creates an R objected called `char_vect` that contains the letters "A" (the first letter of the alphabet) through "Q" (the 17th letter of the alphabet).
+char_vect <- LETTERS[1:17]
+```
+
+
+```{r itemsafterD}
+#Determine how many of the items in `char_vect` occur after the letter "D"
+
+#Reference: ChatGPT
+
+# Find the index of 'D' in the vector
+index_of_d <- which(char_vect == 'D')
+
+# Extract elements after 'D' using subsetting
+elements_after_d <- char_vect[(index_of_d + 1):length(char_vect)]
+  
+# Count the number of elements after 'D'
+count_after_d <- length(elements_after_d)
+  
+cat(paste("Number of items after 'D':", count_after_d, "\n"))
+
+```
